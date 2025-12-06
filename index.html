@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">MyPortfolio.</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Your Name</span></h1>
+            <h2>DevOps Engineer & Cloud Enthusiast</h2>
+            <p>Automating infrastructure and building scalable systems.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn primary-btn">View Work</a>
+                <a href="#contact" class="btn secondary-btn">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a passionate technology professional with a focus on cloud computing and automation. I enjoy solving complex infrastructure problems and optimizing CI/CD pipelines.</p>
+                    <br>
+                    <p>My goal is to bridge the gap between development and operations to ensure faster and more reliable software delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-aws"></i>
+                    <h3>Cloud</h3>
+                    <p>AWS, Azure, Google Cloud</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-docker"></i>
+                    <h3>Containerization</h3>
+                    <p>Docker, Kubernetes (K8s)</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-code-branch"></i>
+                    <h3>CI/CD</h3>
+                    <p>Jenkins, GitHub Actions, GitLab</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-terminal"></i>
+                    <h3>Scripting</h3>
+                    <p>Python, Bash, Terraform</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Junior DevOps Engineer</h3>
+                        <h4>Company Name</h4>
+                        <p>Managed AWS infrastructure, automated deployments using Jenkins, and containerized legacy applications.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2021 - 2023</div>
+                    <div class="timeline-content">
+                        <h3>System Administrator</h3>
+                        <h4>Company Name</h4>
+                        <p>Maintained Linux servers, managed user permissions, and handled network troubleshooting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Resume Website CI/CD</h3>
+                    <p>Hosted this website using a fully automated pipeline with GitHub Actions and Docker.</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>K8s Cluster Setup</h3>
+                    <p>Deployed a highly available Kubernetes cluster on bare metal using Kubeadm.</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Infrastructure as Code</h3>
+                    <p>Provisioned AWS VPC, EC2, and RDS instances using Terraform modules.</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <p>I am currently open to new opportunities. Feel free to reach out!</p>
+                <div class="social-links">
+                    <a href="mailto:your.email@example.com" class="social-btn"><i class="fas fa-envelope"></i> Email Me</a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/yourusername" target="_blank" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
