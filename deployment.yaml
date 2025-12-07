@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resume-website-deployment
+  labels:
+    app: resume-website
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: resume-website
+  template:
+    metadata:
+      labels:
+        app: resume-website
+    spec:
+      containers:
+      - name: resume-website
+        image: harrunegi/resume-site:latest
+        ports:
+        - containerPort: 80
+        imagePullPolicy: Always
