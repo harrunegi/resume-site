@@ -33,4 +33,4 @@ jobs:
                   kubectl rollout restart deployment/resume-website
             - name: Verfy Deployment
               run: |
-                  kubectl rollout status deployment/resume-website
+                  kubectl rollout status deployment/resume-website-deployment
