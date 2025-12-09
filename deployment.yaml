@@ -14,9 +14,25 @@ spec:
       labels:
         app: resume-website
     spec:
+
       containers:
+      spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - resume-web
+            topologyKey: "kubernetes.io/hostname"
+      containers:
+      - name: resume-web
+        # ... (rest of your container config)
       - name: resume-website
         image: harrunegi/resume-site:latest
         ports:
         - containerPort: 80
         imagePullPolicy: Always
+        
