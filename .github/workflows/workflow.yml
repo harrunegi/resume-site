@@ -5,12 +5,13 @@ on:
             - master
     workflow_dispatch:
 env:
-    DOCKER_BUILDKIT: Hello This is Output
-    NEXT: Environment Variable Test
+    GOOD: Hello This is Output Variable
 jobs:
     build:
         runs-on: ubuntu-latest
         steps:
+            - name: Generate Output Variable
+              run: echo "OUTPUT_VAR=This is output from step" >> $GOOD
             - name : checkout code
               uses: actions/checkout@v6
             - name: Login to DockerHub
