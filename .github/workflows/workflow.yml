@@ -29,6 +29,8 @@ jobs:
                     tags: ${{ secrets.DOCKER_USERNAME }}/resume-site:latest
     
     deploy:
+        env: 
+            NEW_VAR: This is new variable
         needs: build
         runs-on: self-hosted
         steps:
