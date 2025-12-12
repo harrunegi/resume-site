@@ -8,6 +8,8 @@ env:
     GOOD: Hello This is Output Variable
 jobs:
     build:
+        env: 
+            NEW_VAR: This is new variable
         runs-on: ubuntu-latest
         steps:
             - name: Generate Output Variable
@@ -30,6 +32,8 @@ jobs:
         needs: build
         runs-on: self-hosted
         steps:
+            - name: Print New Variable
+              run: echo "$NEW_VAR"
             - name: checkout code
               uses: actions/checkout@v6
             - name: Update K8s Deployment
