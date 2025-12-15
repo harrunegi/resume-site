@@ -31,7 +31,7 @@ jobs:
     deploy:
         env: 
             NEW_VAR: This is new variable 
-        needs: build
+        
         runs-on: self-hosted
         steps:
             - name: Print New Variable
