@@ -15,7 +15,7 @@ jobs:
             - name: Generate Output Variable
               run: echo "$GOOD"
             - name : checkout code
-              uses: actions/checkout@v
+              uses: actions/checkout@v4
             - name: Login to DockerHub
               uses: docker/login-action@v3
               with:
@@ -30,24 +30,17 @@ jobs:
     
     deploy:
         env: 
-            NEW_VAR: This is new variable 
-        
+            NEW_VAR: This is new variable
+        needs: build
         runs-on: self-hosted
         steps:
             - name: Print New Variable
               run: echo "$NEW_VAR"
             - name: checkout code
-              uses: actions/checkout@v6
+              uses: actions/checkout@v4
             - name: Update K8s Deployment
               run: |
                   kubectl rollout restart deployment/resume-website-deployment
             - name: Verfy Deployment
               run: |
                   kubectl rollout status deployment/resume-website-deployment
-    report:
-      needs: [build,deploy]
-      if: failure()
-      runs-on: ubuntu-latest
-      steps:
-        - name: Report Failure
-          run: echo "One of the previous jobs has failed."
