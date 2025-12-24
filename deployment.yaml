@@ -5,7 +5,7 @@ metadata:
   labels:
     app: resume-website
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: resume-website
@@ -15,8 +15,6 @@ spec:
         app: resume-website
     spec:
       containers:
-      - name: resume-web
-        # ... (rest of your container config)
       - name: resume-website
         image: harrunegi/resume-site:latest
         ports:
